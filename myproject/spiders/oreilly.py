@@ -1,6 +1,6 @@
 import scrapy
 
-from myproject.books import oreillybook
+from myproject.books import OreillyBook
 
 
 class NewsSpider(scrapy.Spider):
@@ -18,7 +18,7 @@ class NewsSpider(scrapy.Spider):
 
     def parse_books(self, response):
         # 本の詳細ページから必要な情報をパースする
-        item = oreillybook()
+        item = OreillyBook()
         item['url'] = response.url
         item['title'] = response.css('title::text').extract_first()
         item['subtitle'] = response.css('subtitle::text').extract_first()

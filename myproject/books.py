@@ -7,7 +7,7 @@
 
 import scrapy
 
-class Oreillybook(scrapy.Item):
+class OreillyBook(scrapy.Item):
     """
     オライリーの本を表す項目
     """
