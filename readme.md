@@ -3,7 +3,7 @@
 - AWS
 - Scrapy
 - Flask
-- SQlite3
+- MySQL
 - ES6
 - Vue.js
 - Bootstrap
