@@ -19,6 +19,7 @@ class NewsSpider(scrapy.Spider):
     def parse_books(self, response):
         # 本の詳細ページから必要な情報をパースする
         item = OreillyBook()
+        item['publisher'] = "O'Reilly"
         item['url'] = response.url
         item['title'] = response.css('title::text').extract_first()
         item['subtitle'] = response.css('subtitle::text').extract_first()

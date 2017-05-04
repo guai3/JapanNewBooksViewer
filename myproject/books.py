@@ -12,6 +12,7 @@ class OreillyBook(scrapy.Item):
     オライリーの本を表す項目
     """
 
+    publisher =scrapy.Field()
     title = scrapy.Field()
     subtitle = scrapy.Field()
     url = scrapy.Field()
