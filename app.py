@@ -6,10 +6,10 @@ app = Flask(__name__)  # インスタンス生成
 
 @app.route("/")  
 def hello():  
-    return "Hello World!"  # ブラウザ画面に"Hello World!"と出力されます。
+    return "Hello World!"  
 
 
-@app.route("/index")  # アプリケーション/indexにアクセスが合った場合
+@app.route("/index")  
 def index():
     conn = MySQLdb.connect(host='localhost', db='jpnbooks',
                            user='root', passwd='')  # MySQLサーバーに接続。
@@ -26,7 +26,7 @@ def index():
         my_dic['image_name'] = image
         my_dic['link_url'] = image
         books.append(my_dic)
-    # /indexにアクセスが来たらtemplates内のindex.htmlが開きます
+        
     return render_template('index.html', message=books)
 
 if __name__ == "__main__":
